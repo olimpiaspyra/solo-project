@@ -14,7 +14,7 @@
 
   <div class="main-container">
     <div class="row">
-    <div class="sidebar col-3">
+    <div class="sidebar col-2">
       <div class="logo">
         <h1>Just do it</h1>
         <i class="fas fa-bars"></i>
@@ -59,7 +59,7 @@
         </div>
     </div>
 
-    <div class="top-bar col-9">
+    <div class="top-bar col-10">
         <div class="top-bar row d-flex justify-content-end">
           <a href="#"><svg x="0px" y="0px" viewBox="0 0 17 18" >
           <path d="M17,9h-2V7.5C15,6.1,13.9,5,12.5,5H4.9L12,2.2V4h1V0.8L2.1,5C0.9,5.2,0,6.3,0,7.5v8C0,16.9,1.1,18,2.5,18h10
@@ -126,80 +126,10 @@
             </div>
 
             <div class="chart">
-              <table>
-                <div class="chart-head">
-                  <p class="chart-title">Earning chart</p>
-                  <div class="chart-legend">
-                    <p><i class="fas fa-circle first"></i>Signups</p>
-                    <p><i class="fas fa-circle second"></i>FTD</p>
-                    <p><i class="fas fa-circle third"></i>Earned</p>
-                  </div>
-                </div>
-                <tbody>
-                  <tr class="qtr q1">
-                    <th scope="row">01</th>
-                    <td class="sent bar" style="height: 113px;"></td>
-                    <td class="paid bar" style="height: 250px;"></td>
-                  </tr>
-                  <tr class="qtr q2">
-                    <th scope="row">02</th>
-                    <td class="sent bar" style="height: 298px;"></td>
-                    <td class="paid bar" style="height: 19px;"></td>
-                  </tr>
-                  <tr class="qtr q3">
-                    <th scope="row">03</th>
-                    <td class="sent bar" style="height: 212px;"></td>
-                    <td class="paid bar" style="height: 55px;"></td>
-                  </tr>
-                  <tr class="qtr q4">
-                    <th scope="row">04</th>
-                    <td class="sent bar" style="height: 300px;"></td>
-                    <td class="paid bar" style="height: 199px;"></td>
-                  </tr>
-                  <tr class="qtr q5">
-                    <th scope="row">05</th>
-                    <td class="sent bar" style="height: 121px;"></td>
-                    <td class="paid bar" style="height: 197px;"></td>
-                  </tr>
-                  <tr class="qtr q6">
-                    <th scope="row">06</th>
-                    <td class="sent bar" style="height: 110px;"></td>
-                    <td class="paid bar" style="height: 195px;"></td>
-                  </tr>
-                  <tr class="qtr q7">
-                    <th scope="row">07</th>
-                    <td class="sent bar" style="height: 78px;"></td>
-                    <td class="paid bar" style="height: 260px;"></td>
-                  </tr>
-                  <tr class="qtr q8">
-                    <th scope="row">08</th>
-                    <td class="sent bar" style="height: 280px;"></td>
-                    <td class="paid bar" style="height: 95px;"></td>
-                  </tr>
-                  <tr class="qtr q9">
-                    <th scope="row">09</th>
-                    <td class="sent bar" style="height: 159px;"></td>
-                    <td class="paid bar" style="height: 333px;"></td>
-                  </tr>
-                  <tr class="qtr q10">
-                    <th scope="row">10</th>
-                    <td class="sent bar" style="height: 212px;"></td>
-                    <td class="paid bar" style="height: 350px;"></td>
-                  </tr>
-                </tbody>
-
-                <div class="table-column">
-                  <div class="scale" style="height: 59px;"><p>600</p></div>
-                  <div class="scale" style="height: 59px;"><p>500</p></div>
-                  <div class="scale" style="height: 59px;"><p>400</p></div>
-                  <div class="scale" style="height: 59px;"><p>300</p></div>
-                  <div class="scale" style="height: 59px;"><p>200</p></div>
-                  <div class="scale" style="height: 59px;"><p>100</p></div>
-                  <div class="scale" style="height: 55px;"><p>0</p></div>
-                </div>
-              </table>
-
+              <p class="title">Earnings chart</p>
+              <canvas id="myChart"></canvas>
             </div>
+
           </div>
           <div class="second-container">
             <h3>Links</h3>
@@ -297,7 +227,8 @@
     </div>
     </div>
   </div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="js/script.js" type="module"></script>
 </body>
 </html>
 
