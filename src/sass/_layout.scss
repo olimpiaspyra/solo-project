@@ -12,16 +12,21 @@ body {
 .row {
   margin: 0;
   padding: 0;
+  max-width: 1140px;
+}
+
+.layout {
+  max-width: 1140px;
 }
 
 /* Sidebar*/
 
 .sidebar {
-  // position: fixed;
   background-color: $sidebar-background-color;
   height: 240vh;
   margin: 0;
   padding: 0;
+  z-index: 1;
 }
 
 .logo {
@@ -97,11 +102,10 @@ h1 {
 /*Top-bar*/
 
 .top-bar {
-  margin: 0;
   padding: 0;
+  max-width: 1140px;
 
   .row {
-    //position: fixed;
     background-color: $logo-color;
     line-height: 0;
 
