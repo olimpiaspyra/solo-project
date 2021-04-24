@@ -16,24 +16,30 @@ body {
 
 /* Sidebar*/
 
-.sidebar{
+.sidebar {
   // position: fixed;
   background-color: $sidebar-background-color;
-  height: 100vh;
+  height: 240vh;
   margin: 0;
   padding: 0;
+}
+
+.logo {
+  text-align: center;
 }
 
 h1 {
   color: $logo-color;
   font-family: $brand-font;
-  font-size: 30px;
-  text-align: center;
-  margin-top: 20px;
+  font-size: 35px;
+  display: inline-block;
 }
 
 .fa-bars {
-  padding-left: 40px;
+  padding-left: 30px;
+  color: $logo-color;
+  font-size: 25px;
+  color: $logo-color;
 }
 
 .menu {
@@ -49,12 +55,7 @@ h1 {
     font-size: 18px;
     margin: 15px 0;
     padding: 10px 0 10px 20px;
-
-    img {
-      height: 30px;
-      width: 50px;
-      padding-right: 20px;
-    }
+    font-family: $paragraph-font;
   }
 
   a:hover {
@@ -62,6 +63,13 @@ h1 {
     border-left: solid 5px $border-color;
     color: $logo-color;
   }
+}
+
+.menu a svg {
+  padding-right: 20px;
+  fill: $text-color;
+  width: 35px;
+  height: 20px;
 }
 
 .contact {
@@ -72,6 +80,7 @@ h1 {
     text-transform: uppercase;
     color: $text-color;
     font-size: 18px;
+    font-family: $paragraph-font;
   }
 
   .manager {
@@ -80,6 +89,7 @@ h1 {
     p {
       display: inline-block;
       color: $manager-name-color;
+      font-family: $paragraph-font;
     }
   }
 }
@@ -98,14 +108,14 @@ h1 {
     a {
       padding: 15px 15px;
       border-left: solid 3px $text-color;
-      font-size: 18px;
-      font-family: $brand-font;
+      font-size: 25px;
+      font-family: $paragraph-font;
       color: $text-color;
       text-decoration: none;
 
-      img {
-        height: 30px;
+      svg {
         width: 45px;
+        height: 25px;
         padding: 0 10px;
       }
 
@@ -117,3 +127,320 @@ h1 {
   }
 }
 
+/* General statistic */
+
+.second-container {
+  margin: 10px auto;
+  width: 100%;
+  background-color: $logo-color;
+
+  h3 {
+    font-family: $paragraph-font;
+    color: $text-color;
+    padding: 20px;
+    border-bottom: solid 1px $text-color;
+    margin: 0;
+  }
+}
+
+.date-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+input {
+  border-radius: 5px;
+  line-height: 2.5;
+  border: 1px solid $text-color;
+  margin-right: 10px;
+  padding-left: 5px;
+}
+
+.date-button {
+  background-color: $border-color;
+  fill: $logo-color;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.statistic {
+  border-top: solid 1px $text-color;
+  margin: 0 auto;
+  padding: 15px;
+
+  .left, .right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    align-items: flex-end;
+  }
+
+  .details {
+    border-bottom: solid 1px $text-color;
+    margin: 20px 10px;
+    width: 60%;
+    justify-content: space-between;
+
+    .title, .number {
+      text-align: center;
+      font-family: $paragraph-font;
+      font-size: 16px;
+    }
+
+    .title {
+      color: $text-color;
+      font-weight: bold;
+    }
+
+    .number {
+      color: $sidebar-background-color;
+    }
+  }
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0 10px;
+  font-family: $paragraph-font;
+  height: 550px;
+}
+
+table {
+  display: block;
+  position: relative;
+  width: 700px;
+  height: 350px;
+  margin: 50px 0;
+  padding: 0;
+  background: transparent;
+  font-size: 11px;
+  border-bottom: 1px solid $text-color;
+}
+
+.table-column {
+  position: relative;
+  top: 50px;
+  height: 350px;
+  left: -360px;
+  font-size: 10px;
+  font-family: $paragraph-font;
+  color: $text-color;
+  padding-bottom: 20px;
+  border-right: 1px solid $text-color;
+  padding-right: 5px;
+  text-align: center;
+}
+
+.chart-head {
+  width: 500px;
+
+  .chart-title {
+    display: block;
+    font-family: $paragraph-font;
+    color: $text-color;
+    font-size: 16px;
+  }
+
+  .chart-legend {
+    text-align: center;
+
+    p {
+      display: inline-block;
+      font-family: $paragraph-font;
+      color: $text-color;
+
+      i {
+        padding-right: 10px;
+      }
+
+      .first {
+        color: $color-paid;
+      }
+
+      .second {
+        color: $color-sent;
+      }
+
+      .third {
+        color: green;
+      }
+    }
+
+    p:first-child, :nth-child(2) {
+      width: 130px;
+      height: 50px;
+      background-color: $layout-color;
+      border-radius: 5px;
+      line-height: 50px;
+      margin-right: 15px;
+    }
+  }
+}
+
+tr, th, td {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+tbody tr {
+  height: 350px;
+  border-right: 1px solid $text-color;
+}
+
+.q1 {
+  left: 0;
+}
+
+.q2 {
+  left: 70px;
+}
+
+.q3 {
+  left: 140px;
+}
+
+.q4 {
+  left: 210px;
+}
+
+.q5 {
+  left: 280px;
+}
+
+.q6 {
+  left: 350px;
+}
+
+.q7 {
+  left: 420px;
+}
+
+.q8 {
+  left: 490px;
+}
+
+.q9 {
+  left: 560px;
+}
+
+.q10 {
+  left: 630px;
+  border-right: none;
+}
+
+tbody th {
+  margin-bottom: -20px;
+  vertical-align: top;
+  font-weight: normal;
+  color: $text-color;
+}
+
+.bar {
+  width: 25px;
+  border-radius: 2px;
+  border-bottom: none;
+}
+
+.sent {
+  left: 45px;
+  background-color: $color-sent;
+  border-color: transparent;
+}
+
+.paid {
+  left: 15px;
+  background-color: $color-paid;
+  border-color: transparent;
+}
+
+/* Links */
+
+.links {
+  height: 1100px;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid $text-color;
+  width: 75%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-size: 20px;
+  font-family: $paragraph-font;
+  cursor: pointer;
+
+  p, a, i {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    color: $text-color;
+    width: 40%;
+  }
+
+  a {
+    color: $manager-name-color;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  i {
+    color: $text-color;
+    font-size: 17px;
+  }
+
+  .link-icon {
+    color: $color-sent;
+    padding-right: 25px;
+  }
+
+  .icons {
+    display: none;
+    width: 20%;
+  }
+}
+
+.link.last {
+  border-bottom: 1px solid $text-color;
+}
+
+.link:hover {
+  background-color: $sidebar-hover-background-color;
+
+  .icons {
+    display: inline-block;
+  }
+}
+
+.button-links {
+  width: 140px;
+  background-color: $border-color;
+  color: $logo-color;
+  margin: 20px auto;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 15px;
+
+  p {
+    font-family: $paragraph-font;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+  }
+}
