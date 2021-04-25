@@ -1,32 +1,28 @@
 body {
-  width: 100%;
+  width: 100vw;
   background-color: $body-color;
 }
 
 .main-container {
   margin: 0 auto;
-  max-width: 1140px;
   background-color: $layout-color;
 }
 
 .row {
   margin: 0;
   padding: 0;
-  max-width: 1140px;
-}
-
-.layout {
-  max-width: 1140px;
+  background-color: yellow;
 }
 
 /* Sidebar*/
 
 .sidebar {
   background-color: $sidebar-background-color;
-  height: 240vh;
+  height: 260vh;
   margin: 0;
   padding: 0;
   z-index: 1;
+  background-color: black;
 }
 
 .logo {
@@ -90,6 +86,7 @@ h1 {
 
   .manager {
     padding: 10px;
+    text-align: center;
 
     p {
       display: inline-block;
@@ -101,9 +98,17 @@ h1 {
 
 /*Top-bar*/
 
+.topbar {
+  position: fixed;
+  width: 84%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
 .top-bar {
   padding: 0;
-  max-width: 1140px;
+  margin-left: 16.666667%;
 
   .row {
     background-color: $logo-color;
@@ -135,7 +140,6 @@ h1 {
 
 .second-container {
   margin: 10px auto;
-  width: 100%;
   background-color: $logo-color;
 
   h3 {
@@ -143,7 +147,7 @@ h1 {
     color: $text-color;
     padding: 20px;
     border-bottom: solid 1px $text-color;
-    margin: 0;
+    margin: 65px 0 0 0;
   }
 }
 
@@ -153,14 +157,17 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 80px;
+  vertical-align: middle;
 }
 
 input {
   border-radius: 5px;
-  line-height: 2.5;
-  border: 1px solid $text-color;
+  border: none;
   margin-right: 10px;
   padding-left: 5px;
+  width: 200px;
+  height: 42px;
+  vertical-align: middle;
 }
 
 .date-button {
@@ -170,6 +177,8 @@ input {
   width: 40px;
   height: 40px;
   cursor: pointer;
+  border-radius: 5px;
+  vertical-align: middle;
 }
 
 .statistic {
@@ -212,8 +221,8 @@ input {
 .chart {
   margin: 50px auto 10px;
   font-family: $paragraph-font;
-  height: 450px;
-  width: 70%;
+  height: 550px;
+  width: 60%;
 
   .title {
     margin-bottom: 30px;
@@ -233,10 +242,10 @@ input {
   display: flex;
   flex-direction: row;
   border-top: 1px solid $text-color;
-  width: 75%;
+  width: 60%;
   margin: 0 auto;
   padding: 30px 20px;
-  font-size: 20px;
+  font-size: 15px;
   font-family: $paragraph-font;
   cursor: pointer;
 
@@ -258,7 +267,7 @@ input {
 
   i {
     color: $text-color;
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .link-icon {
@@ -303,8 +312,5 @@ input {
 
 /* Media queries */
 
-@media (max-width: 768px) {
-
-
-
-}
+// @media (max-width: 768px) {
+// }
