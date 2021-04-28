@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   width: 100vw;
   background-color: $body-color;
@@ -11,7 +15,6 @@ body {
 .row {
   margin: 0;
   padding: 0;
-  background-color: yellow;
 }
 
 /* Sidebar*/
@@ -44,7 +47,6 @@ h1 {
 
 .menu {
   width: 100%;
-  border-bottom: solid 1px $text-color;
   padding-bottom: 10px;
 
   a {
@@ -75,41 +77,41 @@ h1 {
 .contact {
   margin-top: 30px;
   text-align: center;
+  border-top: solid 1px $text-color;
+  padding-top: 30px;
 
-  h4 {
+  .contact-manager {
     text-transform: uppercase;
     color: $text-color;
     font-size: 15px;
     font-family: $paragraph-font;
   }
 
-  .manager {
+  .popup {
     padding: 10px;
     text-align: center;
+    cursor: pointer;
+  }
 
-    p {
-      display: inline-block;
-      color: $manager-name-color;
-      font-family: $paragraph-font;
-    }
+  p {
+    display: inline-block;
+    color: $manager-name-color;
+    font-family: $paragraph-font;
   }
 }
 
 /*Top-bar*/
 
-.topbar {
-  position: fixed;
-  width: 84%;
-  display: flex;
-  justify-content: flex-end;
-  margin: 0;
-}
-
 .top-bar {
   padding: 0;
   margin-left: 16.666667%;
 
-  .row {
+  .topbar {
+    position: fixed;
+    width: 84%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
     background-color: $logo-color;
     line-height: 0;
 
@@ -312,7 +314,6 @@ input {
 /* Media queries */
 
 @media (max-width: 768px) {
-
   .row {
     width: 100%;
   }
@@ -361,5 +362,127 @@ input {
     flex: none;
     max-width: 100%;
     margin-top: 70px;
+
+    .topbar {
+      width: 100%;
+    }
   }
+}
+
+/* Modals */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.overlay::webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  max-width: 80%;
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  padding: 30px;
+  display: none;
+
+  .modal-message {
+    padding: 0 10px;
+    border-bottom: solid 1px $text-color;
+
+    .modal-title {
+      font-family: $paragraph-font;
+      color: $text-color;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    .fa-times {
+      color: $text-color;
+      font-size: 20px;
+    }
+  }
+
+  .button {
+    margin: 0;
+    width: 120px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    font-family: $paragraph-font;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: $border-color;
+    color: $logo-color;
+    margin-left: 10px;
+  }
+}
+
+.modal-manager {
+  .modal-image {
+    border-bottom: solid 1px $text-color;
+    padding: 10px 5px;
+  }
+
+  p {
+    display: inline-block;
+    padding: 0 15px;
+    color: $manager-name-color;
+    font-family: $paragraph-font;
+  }
+
+  .send-message {
+    border-bottom: solid 1px $text-color;
+    padding: 10px 5px;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px 20px;
+
+    .message-text{
+      width: 90%;
+      height: 45px;
+      border-bottom: solid 1px $text-color;
+      border-radius: 5px;
+      font-family: $paragraph-font;
+      color: $text-color;
+      font-size: 15px;
+      padding: 5px;
+      outline: none;
+    }
+
+    .fa-comment-dots {
+      color: $text-color;
+      font-size: 45px;
+      margin: 0 10px;
+    }
+  }
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
 }

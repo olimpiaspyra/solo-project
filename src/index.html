@@ -12,6 +12,22 @@
 </head>
 <body>
 
+  <div class="overlay" id="overlay">
+    <div class="modal modal-manager" id="modalManager">
+      <div class="modal-message">
+        <div class="modal-title"><h4>online chat with your personal manager</h4></div>
+        <div class="btn-close js--close-modal"><i class="fas fa-times"></i></div>
+      </div>
+      <div class="modal-image">
+        <img src="images/manager.png" alt="manager"><p>Mikhael E.</p>
+      </div>
+      <div class="send-message"><i class="fas fa-comment-dots"></i>
+        <textarea class="message-text" name="message" placeholder="Enter the message..."></textarea>
+        <button class="button">Send</button>
+      </div>
+    </div>
+  </div>
+
   <div class="main-container">
     <div class="row">
     <div class="sidebar col-2 position-fixed">
@@ -50,9 +66,9 @@
           </svg>Postback</a>
 
         <div class="contact">
-          <h4>Your manager</h4>
+          <h4 class="contact-manager">Your manager</h4>
           <div class="manager">
-            <img class="manager" src="images/manager.png" alt="manager">
+            <img class="popup" src="images/manager.png" alt="manager">
             <p>Mikhael E.</p>
           </div>
         </div>
